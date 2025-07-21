@@ -40,19 +40,50 @@ Switch between engines dynamically via Preferences screen.
 
 ```
 ├── ui/
-│   ├── theme/
-│   └── screens/               # Compose UI + state
+│   ├── theme/                          # Material 3 theming
+│   ├── components/                     # AppShell, layout containers
+│   └── screens/                        # Composable screens and ChatViewModel
+│
 ├── data/
-│   ├── ChatDao.kt             # Room database access
-│   ├── ChatRepository.kt      # Central data repo
-│   ├── LocalModel.kt          # Downloaded model info
-│   └── PreferenceManager.kt   # DataStore + encrypted token
+│   ├── AppDatabase.kt                  # Room DB: ChatSession, ChatMessage, LocalModelMetadata
+│   ├── ChatDao.kt                      # DAO interfaces for Room
+│   ├── ChatMessage.kt                  # Message entity (content, files, streaming, etc.)
+│   ├── ChatSession.kt                  # Session entity with UUID and metadata
+│   ├── ChatRepository.kt               # Core logic for chat, streaming, persistence
+│   ├── PreferenceManager.kt            # DataStore with encrypted token logic (AES-GCM + Keystore)
+│   ├── WorkManagerChatRepository.kt    # Wrapper around WorkManager use for streaming/download
+│   ├── DownloadRepository.kt           # Starts/stops downloads using WorkManager
+│   ├── LocalModel.kt                   # Data model for models.json and downloaded models
+│   ├── LocalModelMetadata.kt           # DB metadata verification info
+│   └── OpenAIModels.kt                 # DTOs for OpenAI-compatible formats
+│
 ├── domain/
-│   └── AttachmentHandler.kt   # PDF/Text/Image pre-processing
+│   ├── AttachmentHandler.kt            # Handles PDF, TXT, image extraction
+│   ├── LocalModelManager.kt            # Syncs local models with metadata and download state
+│   └── UserDataManager.kt              # Handles user-visible data ops
+│
 ├── workers/
-│   ├── DownloadWorker.kt      # Model downloading
-│   └── ChatStreamingWorker.kt # Chat streaming logic
-└── ChatApplication.kt         # App DI container
+│   ├── ChatStreamingWorker.kt          # Background LLM message streaming
+│   ├── ChatSyncWorker.kt               # Syncs message history
+│   ├── DownloadWorker.kt               # Downloads and extracts models
+│   └── SaveFileWorker.kt               # Downloads file attachments
+│
+├── services/
+│   ├── OllamaService.kt                # Ollama backend integration
+│   ├── LmStudioService.kt              # LM Studio backend integration
+│   └── LocalModelService.kt            # Local inference orchestration
+│
+├── llm/
+│   └── LlmChatModelHelper.kt           # Format abstraction for input messages
+│
+├── network/
+│   ├── NetworkModule.kt                # Provides Retrofit/Moshi/OkHttp
+│   └── LLMService.kt                   # Base service for streaming/chat
+│
+├── ChatApplication.kt                  # Main Application class with WorkManager factory
+├── MainActivity.kt                     # Host activity with AppShell & navigation
+├── Constants.kt                        # All app constants and WorkManager keys
+└── models.json                         # Optional allowlist of downloadable local models
 ```
 
 ✅ MVVM  
@@ -223,12 +254,12 @@ All settings persist via `DataStore` with safe fallback.
 ## 🌍 Supported Languages
 DimaAI supports multilingual LLM chat and text input in the following languages:
 
-English, Arabic (ar), Czech (cs), Danish (da), German (de), Greek (el), Spanish (es),
-Estonian (et), Finnish (fi), French (fr), Hebrew (he), Hindi (hi), Croatian (hr),
+English, Ukrainian (uk), Czech (cs), Danish (da), German (de), Greek (el), Spanish (es),
+Estonian (et), Finnish (fi), French (fr), Croatian (hr),
 Hungarian (hu), Indonesian (in), Italian (it), Japanese (ja), Korean (ko),
 Lithuanian (lt), Latvian (lv), Dutch (nl), Norwegian (no), Polish (pl), Portuguese (pt),
 Romanian (ro), Slovak (sk), Serbian (sr), Swedish (sv), Turkish (tr),
-Ukrainian (uk), Traditional Chinese (zh-rTW)
+Traditional Chinese (zh-rTW), Arabic (ar), Hindi (hi), Hebrew (he)
 
 📘 Language support depends on the selected model and backend (e.g., Ollama, LM Studio, or local).
 
