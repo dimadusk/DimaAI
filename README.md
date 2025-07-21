@@ -287,3 +287,22 @@ See full [LICENSE](LICENSE) for more details.
 
 Built with ❤️ by **@dimadusk**  
 If this helped you, consider ⭐ starring the repo!
+
+## 📸 Screenshots
+
+| Chat | File Upload | Model Settings |
+|------|-------------|----------------|
+| ![Chat](https://raw.githubusercontent.com/dimadusk/DimaAI/main/screenshots/chat.png) | ![Upload](https://raw.githubusercontent.com/dimadusk/DimaAI/main/screenshots/upload.png) | ![Settings](https://raw.githubusercontent.com/dimadusk/DimaAI/main/screenshots/settings.png) |
+
+> Place your screenshots under `/screenshots/` folder in your repo.
+
+---
+
+
+## ☕ Support This Project
+
+If you find DimaAI helpful, consider supporting its development ❤️
+
+<a href="https://ko-fi.com/dimadusk" target="_blank">
+  <img src="https://ko-fi.com/img/githubbutton_sm.svg" alt="Buy Me a Coffee" />
+</a>
