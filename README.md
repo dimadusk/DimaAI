@@ -74,35 +74,6 @@ Switch between engines dynamically via Preferences screen.
 
 Add in `build.gradle.kts`:
 ```kotlin
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.lifecycle.runtime.ktx)
-    implementation(libs.androidx.activity.compose)
-    implementation(platform(libs.androidx.compose.bom))
-    implementation(libs.androidx.ui)
-    implementation(libs.ui)
-    implementation(libs.androidx.ui.graphics)
-    implementation(libs.androidx.ui.tooling.preview)
-    implementation(libs.androidx.material3)
-    testImplementation(libs.junit)
-    // Instrumented tests (for src/androidTest)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
-    androidTestImplementation(platform(libs.androidx.compose.bom))
-    androidTestImplementation(libs.androidx.ui.test.junit4)
-    debugImplementation(libs.androidx.ui.tooling)
-    debugImplementation(libs.androidx.ui.test.manifest)
-    // AndroidX Compose & UI
-    implementation(libs.androidx.compose.foundation)
-    implementation(libs.androidx.constraintlayout.compose)
-    implementation(libs.androidx.foundation)
-    implementation(libs.androidx.lifecycle.viewmodel.compose)
-    implementation(libs.androidx.material.icons.core)
-    implementation(libs.androidx.material.icons.extended)
-    implementation(libs.material.icons.extended)
-    implementation(libs.androidx.material3.android)
-    implementation(libs.androidx.navigation.compose)
-    implementation(libs.androidx.runtime.livedata)
-    implementation(libs.androidx.ui.text.google.fonts)
     // Coil (Image Loading)
     implementation(libs.coil.compose)
     implementation(libs.coil.gif)
@@ -248,6 +219,18 @@ val useReliableScrollingFlow: Flow<Boolean>
 All settings persist via `DataStore` with safe fallback.
 
 ---
+
+## 🌍 Supported Languages
+DimaAI supports multilingual LLM chat and text input in the following languages:
+
+English, Arabic (ar), Czech (cs), Danish (da), German (de), Greek (el), Spanish (es),
+Estonian (et), Finnish (fi), French (fr), Hebrew (he), Hindi (hi), Croatian (hr),
+Hungarian (hu), Indonesian (in), Italian (it), Japanese (ja), Korean (ko),
+Lithuanian (lt), Latvian (lv), Dutch (nl), Norwegian (no), Polish (pl), Portuguese (pt),
+Romanian (ro), Slovak (sk), Serbian (sr), Swedish (sv), Turkish (tr),
+Ukrainian (uk), Traditional Chinese (zh-rTW)
+
+📘 Language support depends on the selected model and backend (e.g., Ollama, LM Studio, or local).
 
 ## 🚀 Roadmap
 
