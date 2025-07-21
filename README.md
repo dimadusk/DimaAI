@@ -323,13 +323,15 @@ If this helped you, consider ⭐ starring the repo!
 
 ### 📲 + ↔️ + 💻 Tablet / Foldable UI
 
-| Chat Split | Preview | Settings |
-|------------|---------|----------|
-| ![Split](https://raw.githubusercontent.com/dimadusk/DimaAI/main/screenshots/tablet/chat_split.png) | ![Preview](https://raw.githubusercontent.com/dimadusk/DimaAI/main/screenshots/tablet/preview.png) | ![Settings](https://raw.githubusercontent.com/dimadusk/DimaAI/main/screenshots/tablet/settings.png) |
+| Preview | Settings |
+|------------|---------|
+| ![Preview](https://raw.githubusercontent.com/dimadusk/DimaAI/main/screenshots/tablet/preview.png) | ![Settings](https://raw.githubusercontent.com/dimadusk/DimaAI/main/screenshots/tablet/settings.png) |
 
 | History | Preferences | Streaming |
 |---------|-------------|-----------|
 | ![History](https://raw.githubusercontent.com/dimadusk/DimaAI/main/screenshots/tablet/history.png) | ![Preferences](https://raw.githubusercontent.com/dimadusk/DimaAI/main/screenshots/tablet/preferences.png) | ![Streaming](https://raw.githubusercontent.com/dimadusk/DimaAI/main/screenshots/tablet/chat_streaming.png) |
+
+
 
 🎞️ **Tablet Demo (.gif)**  
 ![Tablet Demo](https://raw.githubusercontent.com/dimadusk/DimaAI/main/screenshots/tablet/demo.gif)
