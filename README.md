@@ -321,7 +321,7 @@ If this helped you, consider ⭐ starring the repo!
 
 ---
 
-### 💊 Tablet / Foldable UI
+### 📲 + ↔️ + 💻 Tablet / Foldable UI
 
 | Chat Split | Preview | Settings |
 |------------|---------|----------|
