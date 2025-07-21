@@ -252,7 +252,7 @@ All settings persist via `DataStore` with safe fallback.
 ---
 
 ## 🌍 Supported Languages
-DimaAI supports multilingual LLM chat and text input in the following languages:
+DimaAI supports multilingual UI and LLM chat and text input in the following languages:
 
 English, Ukrainian (uk), Czech (cs), Danish (da), German (de), Greek (el), Spanish (es),
 Estonian (et), Finnish (fi), French (fr), Croatian (hr),
