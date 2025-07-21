@@ -26,11 +26,11 @@ It supports local and self-hosted models via **Ollama**, **LM Studio**, or **on-
 
 ## 🧠 Supported Inference Backends
 
-| Engine       | Streaming | Model List | Offline? | Notes                           |
-|--------------|-----------|------------|----------|----------------------------------|
-| Ollama       | ✅        | ✅         | ✅       | Requires local Ollama server     |
-| LM Studio    | ✅        | ✅         | ✅       | Custom HTTP endpoints            |
-| Local Model  | ⚠️ WIP    | Manual     | ✅       | Downloaded + verified            |
+| Engine       | Streaming | Model List | Offline?  |             Notes                     |
+|--------------|-----------|------------|-----------|---------------------------------------|
+| Ollama       | ✅        | ✅         | ✅       | Requires local Ollama server         |
+| LM Studio    | ✅        | ✅         | ✅       | Custom HTTP endpoints                |
+| Local Model  | ✅        | ✅         | ✅       | Fully supported via bundled downloads|
 
 Switch between engines dynamically via Preferences screen.
 
