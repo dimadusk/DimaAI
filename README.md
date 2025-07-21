@@ -265,11 +265,11 @@ Traditional Chinese (zh-rTW), Arabic (ar), Hindi (hi), Hebrew (he)
 
 ## 🚀 Roadmap
 
-- [ ] Add HuggingFace inference API support
-- [ ] Offline quantized model UI launcher
-- [ ] PDF content preview
-- [ ] Export as Markdown/HTML
-- [ ] UI polish for tablet/foldables
+- [ ] **PDF content preview** *(in progress)*
+- [x] HuggingFace inference API support
+- [x] Offline quantized model UI launcher
+- [x] Export as Markdown/HTML
+- [x] UI polish for tablet/foldables
 
 ---
 
