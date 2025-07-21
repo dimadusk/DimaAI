@@ -302,13 +302,37 @@ See full [LICENSE](LICENSE) for more details.
 Built with ❤️ by **@dimadusk**  
 If this helped you, consider ⭐ starring the repo!
 
+---
+
 ## 📸 Screenshots
 
-| Chat | File Upload | Model Settings |
-|------|-------------|----------------|
-| ![Chat](https://raw.githubusercontent.com/dimadusk/DimaAI/main/screenshots/chat.png) | ![Upload](https://raw.githubusercontent.com/dimadusk/DimaAI/main/screenshots/upload.png) | ![Settings](https://raw.githubusercontent.com/dimadusk/DimaAI/main/screenshots/settings.png) |
+### 📱 Phone UI
 
-> Place your screenshots under `/screenshots/` folder in your repo.
+| Chat | Upload | Settings |
+|------|--------|----------|
+| ![Chat](https://raw.githubusercontent.com/dimadusk/DimaAI/main/screenshots/phone/chat.png) | ![Upload](https://raw.githubusercontent.com/dimadusk/DimaAI/main/screenshots/phone/upload.png) | ![Settings](https://raw.githubusercontent.com/dimadusk/DimaAI/main/screenshots/phone/settings.png) |
+
+| History | Preferences | Chat (Streaming) |
+|---------|-------------|------------------|
+| ![History](https://raw.githubusercontent.com/dimadusk/DimaAI/main/screenshots/phone/history.png) | ![Preferences](https://raw.githubusercontent.com/dimadusk/DimaAI/main/screenshots/phone/preferences.png) | ![Streaming](https://raw.githubusercontent.com/dimadusk/DimaAI/main/screenshots/phone/chat_reply.png) |
+
+🎞️ **Phone Demo (.gif)**  
+![Phone Demo](https://raw.githubusercontent.com/dimadusk/DimaAI/main/screenshots/phone/demo.gif)
+
+---
+
+### 💊 Tablet / Foldable UI
+
+| Chat Split | Preview | Settings |
+|------------|---------|----------|
+| ![Split](https://raw.githubusercontent.com/dimadusk/DimaAI/main/screenshots/tablet/chat_split.png) | ![Preview](https://raw.githubusercontent.com/dimadusk/DimaAI/main/screenshots/tablet/preview.png) | ![Settings](https://raw.githubusercontent.com/dimadusk/DimaAI/main/screenshots/tablet/settings.png) |
+
+| History | Preferences | Streaming |
+|---------|-------------|-----------|
+| ![History](https://raw.githubusercontent.com/dimadusk/DimaAI/main/screenshots/tablet/history.png) | ![Preferences](https://raw.githubusercontent.com/dimadusk/DimaAI/main/screenshots/tablet/preferences.png) | ![Streaming](https://raw.githubusercontent.com/dimadusk/DimaAI/main/screenshots/tablet/chat_streaming.png) |
+
+🎞️ **Tablet Demo (.gif)**  
+![Tablet Demo](https://raw.githubusercontent.com/dimadusk/DimaAI/main/screenshots/tablet/demo.gif)
 
 ---
 
