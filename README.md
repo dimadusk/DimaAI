@@ -1,7 +1,7 @@
 # 🧠 DimaAI — Local-first LLM Chat App for Android
 
 DimaAI is an offline-capable AI chat app built with Jetpack Compose.  
-It supports local and self-hosted models via **Ollama**, **LM Studio**, or **on-device downloads**, and features rich file support, encrypted access token storage, and advanced model management with WorkManager.
+It supports local and self-hosted models via **Ollama**, **LM Studio**, or **on-device LLMs via LiteRT downloads**, and features rich file support, encrypted access token storage, and advanced model management with WorkManager.
 
 <p align="center">
   <img src="https://img.shields.io/badge/Android-Kotlin%20%7C%20Jetpack%20Compose-blueviolet?style=flat-square" />
@@ -30,7 +30,7 @@ It supports local and self-hosted models via **Ollama**, **LM Studio**, or **on-
 |--------------|-----------|------------|-----------|---------------------------------------|
 | Ollama       | ✅        | ✅         | ✅       | Requires local Ollama server         |
 | LM Studio    | ✅        | ✅         | ✅       | Custom HTTP endpoints                |
-| Local Model  | ✅        | ✅         | ✅       | Fully supported via bundled downloads|
+| LiteRT (On device LLMs)  | ✅        | ✅         | ✅       | Fully supported via bundled downloads|
 
 Switch between engines dynamically via Preferences screen.
 
@@ -98,7 +98,7 @@ Switch between engines dynamically via Preferences screen.
 ### 🧰 Prerequisites
 
 - Android Studio Iguana+
-- Minimum SDK: 26 (Android 8.0+)
+- Minimum SDK: 28 (Android 10.0+)
 - Recommended: Android 12+
 
 ### 📦 Dependencies
@@ -161,7 +161,7 @@ Add in `build.gradle.kts`:
 
 2. Open in Android Studio
 
-3. Launch on device/emulator with Android 8+
+3. Launch on device/emulator with Android 10+
 
 ---
 
@@ -177,7 +177,7 @@ Add in `build.gradle.kts`:
 
 Supports:
 - Images: `.jpg`, `.png`
-- Documents: `.txt`, `.pdf`
+- Documents: `.txt
 - Files stored in `filesDir` under:
   - `/chat_files/`
   - `/chat_images/`
@@ -192,8 +192,9 @@ Supports:
 ## 📥 Model Downloads
 
 Supported via:
-- Direct binary (`.bin`)
-- Zipped model packages (`.zip` with manifest)
+- Direct binary (`.task`)
+- Zipped model packages (`.task` with manifest)
+- https://huggingface.co/litert-community/models
 
 Includes:
 - Metadata persistence in Room
@@ -265,11 +266,14 @@ Traditional Chinese (zh-rTW), Arabic (ar), Hindi (hi), Hebrew (he)
 
 ## 🚀 Roadmap
 
-- [ ] **PDF content preview** *(in progress)*
-- [x] HuggingFace inference API support
+- [x] HuggingFace inference API support (LiteRT on device models which require Authorization)
 - [x] Offline quantized model UI launcher
-- [x] Export as Markdown/HTML
+- [x] Full Backup and Import System as .zip
 - [x] UI polish for tablet/foldables
+- [x] Secure, Encrypted Token Storage
+- [x] Multi-Backend Support (Ollama & LM Studio)
+- [x] Background work and notifications via Workmanager
+- [x] Advanced Chat and File Handling (.jpg, .png, .txt) within chat messages (Image recognitions support by Ollama only Vision model required)
 
 ---
 
@@ -308,9 +312,9 @@ If this helped you, consider ⭐ starring the repo!
 
 ### 📱 Phone UI
 
-| Chat | Upload | Settings |
+| Chat | Menu | Settings |
 |------|--------|----------|
-| ![Chat](https://raw.githubusercontent.com/dimadusk/DimaAI/main/screenshots/phone/chat.png) | ![Upload](https://raw.githubusercontent.com/dimadusk/DimaAI/main/screenshots/phone/upload.png) | ![Settings](https://raw.githubusercontent.com/dimadusk/DimaAI/main/screenshots/phone/settings.png) |
+| ![Chat](https://raw.githubusercontent.com/dimadusk/DimaAI/main/screenshots/phone/chat.png) | ![Upload](https://raw.githubusercontent.com/dimadusk/DimaAI/main/screenshots/phone/menu.png) | ![Settings](https://raw.githubusercontent.com/dimadusk/DimaAI/main/screenshots/phone/settings.png) |
 
 | History | Preferences | Chat (Streaming) |
 |---------|-------------|------------------|
