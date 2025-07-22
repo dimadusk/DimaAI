@@ -1,7 +1,7 @@
 # 🧠 DimaAI — Local-first LLM Chat App for Android
 
 DimaAI is an offline-capable AI chat app built with Jetpack Compose.  
-It supports local and self-hosted models via **Ollama**, **LM Studio**, or **on-device LLMs via LiteRT downloads**, and features rich file support, encrypted access token storage, and advanced model management with WorkManager.
+It supports local and self-hosted models via **Ollama**, **LM Studio**, or **on-device MediaPipe LLMs via downloads**, and features rich file support, encrypted access token storage, and advanced model management with WorkManager.
 
 <p align="center">
   <img src="https://img.shields.io/badge/Android-Kotlin%20%7C%20Jetpack%20Compose-blueviolet?style=flat-square" />
@@ -267,7 +267,7 @@ Traditional Chinese (zh-rTW), Arabic (ar), Hindi (hi), Hebrew (he)
 ## 🚀 Roadmap
 
 - [x] HuggingFace inference API support (LiteRT on device models which require Authorization)
-- [x] Offline quantized model UI launcher
+- [x] Offline quantized model UI launcher (14 LLMs fully working offline from device)
 - [x] Full Backup and Import System as .zip
 - [x] UI polish for tablet/foldables
 - [x] Secure, Encrypted Token Storage
@@ -327,9 +327,9 @@ If this helped you, consider ⭐ starring the repo!
 
 ### 📲 + ↔️ + 💻 Tablet / Foldable UI
 
-| Preview | Settings |
-|------------|---------|
-| ![Preview](https://raw.githubusercontent.com/dimadusk/DimaAI/main/screenshots/tablet/preview.png) | ![Settings](https://raw.githubusercontent.com/dimadusk/DimaAI/main/screenshots/tablet/settings.png) |
+| Preview | Settings | HuggingFace Auth |
+|------------|-------|------------------|
+| ![Preview](https://raw.githubusercontent.com/dimadusk/DimaAI/main/screenshots/tablet/preview.png) | ![Settings](https://raw.githubusercontent.com/dimadusk/DimaAI/main/screenshots/tablet/settings.png) | ![HuggingFace](https://raw.githubusercontent.com/dimadusk/DimaAI/main/screenshots/tablet/huggingfaceauth.png) |
 
 | History | Preferences | Streaming |
 |---------|-------------|-----------|
